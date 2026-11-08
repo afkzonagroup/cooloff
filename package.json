@@ -1,6 +1,6 @@
 {
   "name": "@afkzona/cooloff",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Withdrawal function for online shops under Article 11a of the Consumer Rights Directive 2011/83/EU (inserted by Directive (EU) 2023/2673): web component, server handlers and acknowledgement of receipt.",
   "license": "Apache-2.0",
   "author": "MB AFKzona Group",
