@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your order - Example Shop</title>
+  <link rel="stylesheet" href="/app.css">
+  <script type="module" src="/cooloff/component/define.js"></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <span class="shop">Example Shop</span>
+    <nav aria-label="Language" class="langs">
+      <a href="?lang=en">EN</a>
+      <a href="?lang=de">DE</a>
+      <a href="?lang=fr">FR</a>
+      <a href="?lang=lt">LT</a>
+      <a href="?lang=pl">PL</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Order ORDER-1001</h1>
+    <p>Placed on 19 June 2026. Delivered on 22 June 2026.</p>
+    <ul class="items">
+      <li>Running shoes, size 42</li>
+      <li>Rain jacket, size M</li>
+    </ul>
+
+    <!-- The withdrawal function (Art. 11a of Directive 2011/83/EU). Keep it prominent and available for the whole withdrawal period. -->
+    <withdrawal-button
+      endpoint="/api/withdrawal"
+      prefill-contract="ORDER-1001"
+      allow-partial></withdrawal-button>
+    <noscript>
+      <p>To withdraw from this contract, email withdrawals@shop.example with your name and order number.</p>
+    </noscript>
+  </main>
+</body>
+</html>

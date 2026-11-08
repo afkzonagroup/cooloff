@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "declaration": false,
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "outDir": "./.medusa/server",
+    "rootDir": "./",
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "checkJs": false,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "types": ["node", "jest"]
+  },
+  "ts-node": {
+    "swc": true
+  },
+  "include": ["src/**/*", "integration-tests/**/*", ".medusa/types/*"],
+  "exclude": ["node_modules", ".medusa/server", ".medusa/admin", ".cache", "src/admin"]
+}

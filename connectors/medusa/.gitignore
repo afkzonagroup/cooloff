@@ -1,0 +1,4 @@
+.medusa/
+node_modules/
+.env
+*.log

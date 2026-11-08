@@ -1,0 +1,9 @@
+{
+  "name": "cooloff-medusa-test-app",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Minimal Medusa application used only by the Cooloff plugin's end-to-end test. Resolves packages from the plugin's node_modules; never install here.",
+  "dependencies": {
+    "@medusajs/medusa": "2.22.0"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "description": "Shared test vectors. Every implementation must produce the same values.",
+  "secret": "test-vector-secret-not-for-production-use-0123456789",
+  "submittedAt": "2026-06-19T08:30:00.000Z",
+  "trader": {
+    "name": "Example Shop",
+    "timeZone": "Europe/Vilnius"
+  },
+  "vectors": [
+    {
+      "input": {
+        "name": "Jane Doe",
+        "contract": "ORDER-1001",
+        "email": "jane@example.eu",
+        "items": [],
+        "language": "en",
+        "idempotencyKey": "k_0123456789abcdef"
+      },
+      "canonical": "[\"cooloff-v1\",\"k_0123456789abcdef\",\"Jane Doe\",\"ORDER-1001\",\"jane@example.eu\",[],\"en\"]",
+      "receiptId": "WD-2AZG-7T76-T9F3-G4RM",
+      "storageKey": "694e0c4b4f9517967fbb7b78029568f21defdd06c2419aff6787705bf6b0d095",
+      "acknowledgement": {
+        "subject": "Acknowledgement of receipt of your withdrawal WD-2AZG-7T76-T9F3-G4RM",
+        "lines": [
+          {
+            "label": "Trader",
+            "value": "Example Shop"
+          },
+          {
+            "label": "Name",
+            "value": "Jane Doe"
+          },
+          {
+            "label": "Order or contract number",
+            "value": "ORDER-1001"
+          },
+          {
+            "label": "Email address",
+            "value": "jane@example.eu"
+          },
+          {
+            "label": "Items",
+            "value": "Whole contract"
+          },
+          {
+            "label": "Date and time of submission",
+            "value": "2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)"
+          },
+          {
+            "label": "Date and time of submission (UTC)",
+            "value": "2026-06-19 08:30:00 UTC"
+          },
+          {
+            "label": "Receipt number",
+            "value": "WD-2AZG-7T76-T9F3-G4RM"
+          }
+        ],
+        "text": "We have received your withdrawal from the contract. This message is the acknowledgement of receipt.\n\nI withdraw from the contract identified below.\n\nTrader: Example Shop\nName: Jane Doe\nOrder or contract number: ORDER-1001\nEmail address: jane@example.eu\nItems: Whole contract\nDate and time of submission: 2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)\nDate and time of submission (UTC): 2026-06-19 08:30:00 UTC\nReceipt number: WD-2AZG-7T76-T9F3-G4RM\n"
+      }
+    },
+    {
+      "input": {
+        "name": "Jürgen Müller",
+        "contract": "Bestellung 42/2026",
+        "email": "jane@example.eu",
+        "items": [],
+        "language": "de",
+        "idempotencyKey": "k_0123456789abcdef"
+      },
+      "canonical": "[\"cooloff-v1\",\"k_0123456789abcdef\",\"Jürgen Müller\",\"Bestellung 42/2026\",\"jane@example.eu\",[],\"de\"]",
+      "receiptId": "WD-SMM7-BKZH-PZ1P-VXWN",
+      "storageKey": "694e0c4b4f9517967fbb7b78029568f21defdd06c2419aff6787705bf6b0d095",
+      "acknowledgement": {
+        "subject": "Eingangsbestätigung Ihres Widerrufs WD-SMM7-BKZH-PZ1P-VXWN",
+        "lines": [
+          {
+            "label": "Unternehmer",
+            "value": "Example Shop"
+          },
+          {
+            "label": "Name",
+            "value": "Jürgen Müller"
+          },
+          {
+            "label": "Bestell- oder Vertragsnummer",
+            "value": "Bestellung 42/2026"
+          },
+          {
+            "label": "E-Mail-Adresse",
+            "value": "jane@example.eu"
+          },
+          {
+            "label": "Artikel",
+            "value": "Gesamter Vertrag"
+          },
+          {
+            "label": "Datum und Uhrzeit der Übermittlung",
+            "value": "2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)"
+          },
+          {
+            "label": "Datum und Uhrzeit der Übermittlung (UTC)",
+            "value": "2026-06-19 08:30:00 UTC"
+          },
+          {
+            "label": "Bestätigungsnummer",
+            "value": "WD-SMM7-BKZH-PZ1P-VXWN"
+          }
+        ],
+        "text": "Wir haben Ihren Widerruf des Vertrags erhalten. Diese Nachricht ist die Eingangsbestätigung.\n\nHiermit widerrufe ich den unten angegebenen Vertrag.\n\nUnternehmer: Example Shop\nName: Jürgen Müller\nBestell- oder Vertragsnummer: Bestellung 42/2026\nE-Mail-Adresse: jane@example.eu\nArtikel: Gesamter Vertrag\nDatum und Uhrzeit der Übermittlung: 2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)\nDatum und Uhrzeit der Übermittlung (UTC): 2026-06-19 08:30:00 UTC\nBestätigungsnummer: WD-SMM7-BKZH-PZ1P-VXWN\n"
+      }
+    },
+    {
+      "input": {
+        "name": "Žydrūnė Šiaulienė",
+        "contract": "ORDER-1001",
+        "email": "jane@example.eu",
+        "items": [
+          "Batai, 42 dydis",
+          "Striukė \"M\""
+        ],
+        "language": "lt",
+        "idempotencyKey": "k_0123456789abcdef"
+      },
+      "canonical": "[\"cooloff-v1\",\"k_0123456789abcdef\",\"Žydrūnė Šiaulienė\",\"ORDER-1001\",\"jane@example.eu\",[\"Batai, 42 dydis\",\"Striukė \\\"M\\\"\"],\"lt\"]",
+      "receiptId": "WD-M412-1E40-909Y-K2ZQ",
+      "storageKey": "694e0c4b4f9517967fbb7b78029568f21defdd06c2419aff6787705bf6b0d095",
+      "acknowledgement": {
+        "subject": "Jūsų sutarties atsisakymo gavimo patvirtinimas WD-M412-1E40-909Y-K2ZQ",
+        "lines": [
+          {
+            "label": "Prekiautojas",
+            "value": "Example Shop"
+          },
+          {
+            "label": "Vardas ir pavardė",
+            "value": "Žydrūnė Šiaulienė"
+          },
+          {
+            "label": "Užsakymo arba sutarties numeris",
+            "value": "ORDER-1001"
+          },
+          {
+            "label": "El. pašto adresas",
+            "value": "jane@example.eu"
+          },
+          {
+            "label": "Prekės",
+            "value": "Batai, 42 dydis; Striukė \"M\""
+          },
+          {
+            "label": "Pateikimo data ir laikas",
+            "value": "2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)"
+          },
+          {
+            "label": "Pateikimo data ir laikas (UTC)",
+            "value": "2026-06-19 08:30:00 UTC"
+          },
+          {
+            "label": "Patvirtinimo numeris",
+            "value": "WD-M412-1E40-909Y-K2ZQ"
+          }
+        ],
+        "text": "Gavome Jūsų pareiškimą apie sutarties atsisakymą. Šis laiškas yra gavimo patvirtinimas.\n\nAtsisakau toliau nurodytos sutarties.\n\nPrekiautojas: Example Shop\nVardas ir pavardė: Žydrūnė Šiaulienė\nUžsakymo arba sutarties numeris: ORDER-1001\nEl. pašto adresas: jane@example.eu\nPrekės: Batai, 42 dydis; Striukė \"M\"\nPateikimo data ir laikas: 2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)\nPateikimo data ir laikas (UTC): 2026-06-19 08:30:00 UTC\nPatvirtinimo numeris: WD-M412-1E40-909Y-K2ZQ\n"
+      }
+    },
+    {
+      "input": {
+        "name": "Γιώργος Παπαδόπουλος",
+        "contract": "Π-77",
+        "email": "giorgos@example.gr",
+        "items": [],
+        "language": "el",
+        "idempotencyKey": "k_0123456789abcdef"
+      },
+      "canonical": "[\"cooloff-v1\",\"k_0123456789abcdef\",\"Γιώργος Παπαδόπουλος\",\"Π-77\",\"giorgos@example.gr\",[],\"el\"]",
+      "receiptId": "WD-GTDV-ZD8A-Q7JX-YMCM",
+      "storageKey": "694e0c4b4f9517967fbb7b78029568f21defdd06c2419aff6787705bf6b0d095",
+      "acknowledgement": {
+        "subject": "Βεβαίωση παραλαβής της υπαναχώρησής σας WD-GTDV-ZD8A-Q7JX-YMCM",
+        "lines": [
+          {
+            "label": "Έμπορος",
+            "value": "Example Shop"
+          },
+          {
+            "label": "Ονοματεπώνυμο",
+            "value": "Γιώργος Παπαδόπουλος"
+          },
+          {
+            "label": "Αριθμός παραγγελίας ή σύμβασης",
+            "value": "Π-77"
+          },
+          {
+            "label": "Διεύθυνση email",
+            "value": "giorgos@example.gr"
+          },
+          {
+            "label": "Προϊόντα",
+            "value": "Ολόκληρη η σύμβαση"
+          },
+          {
+            "label": "Ημερομηνία και ώρα υποβολής",
+            "value": "2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)"
+          },
+          {
+            "label": "Ημερομηνία και ώρα υποβολής (UTC)",
+            "value": "2026-06-19 08:30:00 UTC"
+          },
+          {
+            "label": "Αριθμός βεβαίωσης",
+            "value": "WD-GTDV-ZD8A-Q7JX-YMCM"
+          }
+        ],
+        "text": "Λάβαμε την υπαναχώρησή σας από τη σύμβαση. Αυτό το μήνυμα είναι η βεβαίωση παραλαβής.\n\nΥπαναχωρώ από τη σύμβαση που αναφέρεται παρακάτω.\n\nΈμπορος: Example Shop\nΟνοματεπώνυμο: Γιώργος Παπαδόπουλος\nΑριθμός παραγγελίας ή σύμβασης: Π-77\nΔιεύθυνση email: giorgos@example.gr\nΠροϊόντα: Ολόκληρη η σύμβαση\nΗμερομηνία και ώρα υποβολής: 2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)\nΗμερομηνία και ώρα υποβολής (UTC): 2026-06-19 08:30:00 UTC\nΑριθμός βεβαίωσης: WD-GTDV-ZD8A-Q7JX-YMCM\n"
+      }
+    },
+    {
+      "input": {
+        "name": "O'Brien <b>&</b> \\ / \"quoted\"",
+        "contract": "A/B\\C",
+        "email": "jane@example.eu",
+        "items": [],
+        "language": "en",
+        "idempotencyKey": "k_ZZZZZZZZZZZZZZZZZZZZ_-"
+      },
+      "canonical": "[\"cooloff-v1\",\"k_ZZZZZZZZZZZZZZZZZZZZ_-\",\"O'Brien <b>&</b> \\\\ / \\\"quoted\\\"\",\"A/B\\\\C\",\"jane@example.eu\",[],\"en\"]",
+      "receiptId": "WD-NADG-4T10-T62C-1N6T",
+      "storageKey": "34e8bc05001be6011d504c99e01d4ca1a2b1091820f445e754745ff7456bc733",
+      "acknowledgement": {
+        "subject": "Acknowledgement of receipt of your withdrawal WD-NADG-4T10-T62C-1N6T",
+        "lines": [
+          {
+            "label": "Trader",
+            "value": "Example Shop"
+          },
+          {
+            "label": "Name",
+            "value": "O'Brien <b>&</b> \\ / \"quoted\""
+          },
+          {
+            "label": "Order or contract number",
+            "value": "A/B\\C"
+          },
+          {
+            "label": "Email address",
+            "value": "jane@example.eu"
+          },
+          {
+            "label": "Items",
+            "value": "Whole contract"
+          },
+          {
+            "label": "Date and time of submission",
+            "value": "2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)"
+          },
+          {
+            "label": "Date and time of submission (UTC)",
+            "value": "2026-06-19 08:30:00 UTC"
+          },
+          {
+            "label": "Receipt number",
+            "value": "WD-NADG-4T10-T62C-1N6T"
+          }
+        ],
+        "text": "We have received your withdrawal from the contract. This message is the acknowledgement of receipt.\n\nI withdraw from the contract identified below.\n\nTrader: Example Shop\nName: O'Brien <b>&</b> \\ / \"quoted\"\nOrder or contract number: A/B\\C\nEmail address: jane@example.eu\nItems: Whole contract\nDate and time of submission: 2026-06-19 11:30:00 (Europe/Vilnius, UTC+03:00)\nDate and time of submission (UTC): 2026-06-19 08:30:00 UTC\nReceipt number: WD-NADG-4T10-T62C-1N6T\n"
+      }
+    }
+  ]
+}
