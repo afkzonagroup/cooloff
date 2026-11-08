@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-08
+
+### Fixed
+
+- Rate-limit keys strip an IPv6 zone index without a regular expression, so long hostile input stays fast (#17).
+- The EUR-Lex label check decodes HTML entities in one pass (#17).
+
+### Changed
+
+- Dependabot groups minor and patch updates and ignores major versions (#16).
+- Release workflow skips versions already on npm.
+
 ## [0.1.0] - 2026-11-08
 
 ### Added

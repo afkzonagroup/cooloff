@@ -26,8 +26,6 @@ legal text.
 
 ## Quick start
 
-> **Before the first npm release:** `@afkzona/cooloff` is published to npm from v0.2.0 ([roadmap](https://github.com/afkzonagroup/cooloff/milestone/1)). Until then, build it from source: clone https://github.com/afkzonagroup/cooloff, run `npm ci && npm run build && npm pack`, and install the resulting `.tgz` file wherever the steps below install `@afkzona/cooloff`.
-
 Requirements: Node.js 22 or newer.
 
 ```sh
