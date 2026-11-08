@@ -617,10 +617,8 @@ and [NOTICE](NOTICE). "Cooloff" is a trademark of MB AFKzona Group; see
 
 ### Enterprise
 
-AFKzona Group offers, separately from this repository: a hosted dashboard,
-continuous monitoring across several shops, SSO/SAML, roles, audit evidence
-packs, a legal-update feed and support with an SLA. Contact
-info@afkzonagroup.lt. These are not part of the open source code.
+MB AFKzona Group offers integration into your systems, custom connectors and
+features, and support agreements. Contact info@afkzonagroup.lt.
 
 ## Contributing
 
