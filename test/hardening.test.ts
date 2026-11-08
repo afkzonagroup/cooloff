@@ -212,3 +212,13 @@ describe('acknowledgement subject', () => {
     expect(subject).not.toMatch(/[\r\n\u2028\u2029]/u);
   });
 });
+
+describe('clientRateLimitKey on hostile input', () => {
+  it('drops a zone index and stays fast on long runs of percent signs', () => {
+    expect(clientRateLimitKey('[fe80::1%eth0]')).toBe(clientRateLimitKey('fe80::1'));
+    const t0 = performance.now();
+    clientRateLimitKey(`%${'%'.repeat(200_000)}x`);
+    clientRateLimitKey(`::1${'%'.repeat(200_000)}`);
+    expect(performance.now() - t0).toBeLessThan(200);
+  });
+});

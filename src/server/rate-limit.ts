@@ -120,7 +120,11 @@ function ipv6Groups(address: string): number[] | undefined {
  */
 export function clientRateLimitKey(address: string | undefined): string {
   if (address === undefined) return 'unknown';
-  const text = address.trim().toLowerCase().replace(/^\[(.*)\]$/u, '$1').replace(/%.*$/u, '');
+  let text = address.slice(0, 200).trim().toLowerCase();
+  if (text.startsWith('[') && text.endsWith(']')) text = text.slice(1, -1);
+  // Drop an IPv6 zone index ("fe80::1%eth0"); indexOf keeps this linear on hostile input.
+  const zone = text.indexOf('%');
+  if (zone !== -1) text = text.slice(0, zone);
   if (text.length === 0) return 'unknown';
   if (!text.includes(':')) return text.slice(0, 100);
   const groups = ipv6Groups(text);
