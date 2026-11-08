@@ -14,12 +14,12 @@ function toText(html) {
   return html
     .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gu, ' ')
     .replace(/<[^>]+>/gu, ' ')
-    .replace(/&nbsp;|&#160;/gu, ' ')
-    .replace(/&amp;/gu, '&')
-    .replace(/&lt;/gu, '<')
-    .replace(/&gt;/gu, '>')
-    .replace(/&quot;/gu, '"')
-    .replace(/&#(\d+);/gu, (_, code) => String.fromCodePoint(Number(code)))
+    // Decode entities in one pass so that "&amp;lt;" becomes "&lt;", not "<".
+    .replace(/&(nbsp|amp|lt|gt|quot|#\d{1,7});/gu, (_, name) => {
+      if (name === 'nbsp' || name === '#160') return ' ';
+      if (name.startsWith('#')) return String.fromCodePoint(Number(name.slice(1)));
+      return { amp: '&', lt: '<', gt: '>', quot: '"' }[name];
+    })
     .replace(/\s+/gu, ' ');
 }
 
